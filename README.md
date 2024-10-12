@@ -1,6 +1,5 @@
-# Astro Starter
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+# Guidance and Forgiveness
+![Thumbnail](/public/thumbnail.png)
 
 ## 🚀 Project Structure
 
@@ -12,9 +11,10 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   └── ContainerLayout.vue
+|   |   └── Layout.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
