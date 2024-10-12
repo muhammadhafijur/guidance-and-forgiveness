@@ -12,9 +12,23 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <meta
+      property="og:title"
+      content="Seek Guidance and Forgiveness from Allah"
+    />
+    <meta
+      property="og:description"
+      content="Seek Guidance and Forgiveness from Allah. Embark on a journey towards peace and healing."
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:url" content="https://seekguidance.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Guidance and Forgiveness" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
