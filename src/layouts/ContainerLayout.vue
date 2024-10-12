@@ -30,11 +30,11 @@
           </a>
         </div>
         <div class="text-center font-medium font-inter">
-    <p class="font-bold text-lg sm:text-xl">
-      بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
-    </p>
-    <p class="mt-4 text-base sm:text-lg">BISMILLAHIR RAHMANIR RAHIM</p>
-  </div>
+          <p class="font-bold text-lg sm:text-xl">
+            بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+          </p>
+          <p class="mt-4 text-base sm:text-lg">BISMILLAHIR RAHMANIR RAHIM</p>
+        </div>
         <div class="mt-8">
           <slot />
         </div>
@@ -89,7 +89,14 @@
         :class="[infoPopup ? 'block' : 'hidden']"
         class="w-full max-w-[90%] absolute bottom-16 right-0 p-2 mb-2 font-normal shadow bg-white dark:bg-zinc-950 dark:text-gray-100 rounded-md border dark:border-emerald-500"
       >
-        <p>Reciting dua in Arabic carries special significance as it preserves the original words revealed in the Quran and spoken by the Prophet Muhammad (PBUH). Arabic is a precise language, and even small changes in pronunciation can alter the meaning. By reciting in Arabic, you ensure the true message and blessings of the dua are maintained. Don't worry if you're still learning—every effort you make is rewarding!</p>
+        <p>
+          Reciting dua in Arabic carries special significance as it preserves
+          the original words revealed in the Quran and spoken by the Prophet
+          Muhammad (PBUH). Arabic is a precise language, and even small changes
+          in pronunciation can alter the meaning. By reciting in Arabic, you
+          ensure the true message and blessings of the dua are maintained. Don't
+          worry if you're still learning—every effort you make is rewarding!
+        </p>
       </div>
       <nav
         class="shadow-sm rounded-full p-2 bg-white dark:bg-zinc-950 dark:border-emerald-500 border flex space-x-4"
@@ -170,7 +177,22 @@
           @click="infoPopup = !infoPopup"
           class="text-zinc-700 hover:bg-gray-200 w-12 h-12 grid place-items-center dark:text-zinc-200 dark:hover:bg-zinc-800 rounded-full"
         >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-6"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="size-6"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
           <span class="sr-only">Info</span>
         </button>
       </nav>
@@ -180,7 +202,7 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
-import { useClickOutside } from '../composables/useClickOutside';
+import { useClickOutside } from "../composables/useClickOutside";
 
 const storedTheme = ref("light");
 
@@ -197,24 +219,17 @@ const showThemePopup = ref(false);
 const showMenuPopup = ref(false);
 const infoPopup = ref(false);
 
-
-
 const { elementRef: menuRef } = useClickOutside(() => {
-  showMenuPopup.value = false
+  showMenuPopup.value = false;
 });
-
 
 const { elementRef: themeRef } = useClickOutside(() => {
-  showThemePopup.value = false
+  showThemePopup.value = false;
 });
-
 
 const { elementRef: infoRef } = useClickOutside(() => {
-  infoPopup.value = false
+  infoPopup.value = false;
 });
-
-
-
 
 function toggleTheme(theme) {
   localStorage.setItem("theme", theme); // Store theme in local storage

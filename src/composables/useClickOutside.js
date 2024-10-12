@@ -1,5 +1,4 @@
-
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from "vue";
 
 export function useClickOutside(callback) {
   const elementRef = ref(null);
@@ -11,14 +10,14 @@ export function useClickOutside(callback) {
   };
 
   onMounted(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
   });
 
   onBeforeUnmount(() => {
-    document.removeEventListener('click', handleClickOutside);
+    document.removeEventListener("click", handleClickOutside);
   });
 
   return {
-    elementRef
+    elementRef,
   };
 }
